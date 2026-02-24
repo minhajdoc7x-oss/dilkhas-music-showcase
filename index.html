@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Song Showcase - Dilkhas</title>
+    <title>Dilkhas-Song Showcase</title>
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -37,50 +37,92 @@
         h1 { 
             margin: 10px 0 5px 0; 
             font-size: 22px; 
-            letter-spacing: 0.5px;
+            letter-spacing: 0.5px; 
         }
+
         .artist { 
             color: #1db954; 
-            margin-bottom: 20px; 
-            font-weight: bold;
-            font-size: 16px;
-            text-transform: uppercase;
+            margin-bottom: 15px; 
+            font-weight: 900; 
+            font-size: 24px;   
+            text-transform: uppercase; 
+            letter-spacing: 2px;
         }
+
         audio {
             width: 100%;
-            margin-top: 10px;
+            margin-bottom: 20px;
             height: 40px;
             filter: invert(100%) hue-rotate(180deg) brightness(1.5);
         }
+        
         .lyrics-box {
             margin-top: 25px;
-            padding: 15px;
+            padding: 20px 15px;
             background: rgba(255,255,255,0.05);
-            border-radius: 10px;
-            /* വരികൾക്ക് ഒരു ബോർഡർ ഗ്ലോ നൽകാൻ */
+            border-radius: 15px;
             border-bottom: 2px solid #1db954;
         }
         .lyrics {
             font-style: italic;
-            /* വരികൾ കൂടുതൽ ആകർഷകമാക്കാൻ Gradient നൽകുന്നു */
             background: linear-gradient(to right, #ffffff, #1db954);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            font-size: 16px; /* അല്പം വലുതാക്കി */
+            font-size: 18px;
             line-height: 1.8;
-            font-weight: 600;
-            text-shadow: 0 0 10px rgba(29, 185, 84, 0.3); /* നേർത്ത ഗ്ലോ */
+            font-weight: 900;
+            text-shadow: 0 0 12px rgba(255, 255, 255, 0.2);
+            margin-bottom: 20px;
+        }
+
+        .dev-container {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 15px;
+        }
+        .dev-by { 
+            font-size: 10px; 
+            color: #ff4d4d; 
+            letter-spacing: 2px; 
+            text-transform: uppercase; 
+            font-weight: 800; 
+            margin-bottom: 5px;
+        }
+
+        .minhaj-text { 
+            display: flex; 
+            justify-content: center; 
+            gap: 4px; 
+        }
+        .minhaj-text span {
+            font-size: 20px;
+            color: #ffffff; 
+            font-weight: 900;
+            display: inline-block;
+            animation: bounce 0.8s infinite alternate;
+            text-shadow: 0 0 5px rgba(255,255,255,0.3);
+        }
+        .minhaj-text span:nth-child(2) { animation-delay: 0.1s; }
+        .minhaj-text span:nth-child(3) { animation-delay: 0.2s; }
+        .minhaj-text span:nth-child(4) { animation-delay: 0.3s; }
+        .minhaj-text span:nth-child(5) { animation-delay: 0.4s; }
+        .minhaj-text span:nth-child(6) { animation-delay: 0.5s; }
+
+        @keyframes bounce {
+            from { transform: translateY(0); }
+            to { transform: translateY(-5px); }
         }
     </style>
 </head>
 <body>
 
 <div class="container">
-    <img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=500" alt="Music Art" class="album-art">
-    
+
+    <img src="your-image-here.jpg" alt="Music Art" class="album-art">
+  
     <h1>Plus Two Vibes 2026</h1>
     <p class="artist">Dilkhas</p>
 
+    <!-- ✅ Audio moved here -->
     <audio controls>
         <source src="WhatsApp Audio 2026-02-24 at 10.57.28 AM.mpga" type="audio/mpeg">
         Your browser does not support the audio element.
@@ -91,7 +133,15 @@
             "ജീവിതത്തിലെ മനോഹരമായ നിമിഷങ്ങൾ <br> 
             ഈ പാട്ടിലൂടെ നമുക്ക് ഓർത്തെടുക്കാം..."
         </div>
+      
+        <div class="dev-container">
+            <div class="dev-by">DEVELOPED BY</div>
+            <div class="minhaj-text">
+                <span>M</span><span>I</span><span>N</span><span>H</span><span>A</span><span>J</span>
+            </div>
+        </div>
     </div>
+
 </div>
 
 </body>
