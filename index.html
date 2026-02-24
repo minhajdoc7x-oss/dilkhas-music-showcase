@@ -3,8 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dilkhas-Song Showcase</title>
+    <title>Dilkhas - Song Showcase</title>
     <style>
+        /* Essential Reset for Mobile */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background: linear-gradient(135deg, #121212 0%, #1db95422 100%);
@@ -13,18 +20,20 @@
             justify-content: center;
             align-items: center;
             min-height: 100vh;
-            margin: 0;
+            padding: 20px; /* Space around the card on small screens */
         }
+
         .container {
             background-color: #1e1e1e;
-            padding: 30px;
+            padding: 25px;
             border-radius: 20px;
             box-shadow: 0 15px 35px rgba(0,0,0,0.6);
             text-align: center;
-            max-width: 350px;
-            width: 90%;
+            width: 100%;
+            max-width: 400px; /* Limits size on tablets/desktop */
             border: 1px solid #333;
         }
+
         .album-art {
             width: 100%;
             aspect-ratio: 1/1;
@@ -33,10 +42,12 @@
             box-shadow: 0 8px 20px rgba(0,0,0,0.4);
             object-fit: cover;
             background: #282828;
+            display: block;
         }
+
         h1 { 
             margin: 10px 0 5px 0; 
-            font-size: 22px; 
+            font-size: clamp(18px, 5vw, 22px); /* Fluid typography */
             letter-spacing: 0.5px; 
         }
 
@@ -44,7 +55,7 @@
             color: #1db954; 
             margin-bottom: 15px; 
             font-weight: 900; 
-            font-size: 24px;   
+            font-size: clamp(20px, 6vw, 24px);   
             text-transform: uppercase; 
             letter-spacing: 2px;
         }
@@ -57,30 +68,32 @@
         }
         
         .lyrics-box {
-            margin-top: 25px;
-            padding: 20px 15px;
+            margin-top: 20px;
+            padding: 15px;
             background: rgba(255,255,255,0.05);
             border-radius: 15px;
             border-bottom: 2px solid #1db954;
         }
+
         .lyrics {
             font-style: italic;
             background: linear-gradient(to right, #ffffff, #1db954);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            font-size: 18px;
-            line-height: 1.8;
-            font-weight: 900;
+            font-size: 16px;
+            line-height: 1.6;
+            font-weight: 700;
             text-shadow: 0 0 12px rgba(255, 255, 255, 0.2);
-            margin-bottom: 20px;
+            margin-bottom: 15px;
         }
 
         .dev-container {
             border-top: 1px solid rgba(255,255,255,0.1);
             padding-top: 15px;
         }
+
         .dev-by { 
-            font-size: 10px; 
+            font-size: 9px; 
             color: #ff4d4d; 
             letter-spacing: 2px; 
             text-transform: uppercase; 
@@ -93,14 +106,17 @@
             justify-content: center; 
             gap: 4px; 
         }
+
         .minhaj-text span {
-            font-size: 20px;
+            font-size: 18px;
             color: #ffffff; 
             font-weight: 900;
             display: inline-block;
             animation: bounce 0.8s infinite alternate;
             text-shadow: 0 0 5px rgba(255,255,255,0.3);
         }
+
+        /* Specific delay for animation */
         .minhaj-text span:nth-child(2) { animation-delay: 0.1s; }
         .minhaj-text span:nth-child(3) { animation-delay: 0.2s; }
         .minhaj-text span:nth-child(4) { animation-delay: 0.3s; }
@@ -111,18 +127,23 @@
             from { transform: translateY(0); }
             to { transform: translateY(-5px); }
         }
+
+        /* Adjustments for very small screens */
+        @media (max-width: 320px) {
+            .container { padding: 15px; }
+            h1 { font-size: 16px; }
+            .artist { font-size: 18px; }
+        }
     </style>
 </head>
 <body>
 
 <div class="container">
-
     <img src="WhatsApp Image 2026-02-24 at 12.09.10 PM.jpeg" alt="Music Art" class="album-art">
   
     <h1>Plus Two Vibes 2026</h1>
     <p class="artist">Dilkhas</p>
 
-    <!-- ✅ Audio moved here -->
     <audio controls>
         <source src="WhatsApp Audio 2026-02-24 at 10.57.28 AM.mpga" type="audio/mpeg">
         Your browser does not support the audio element.
@@ -141,7 +162,6 @@
             </div>
         </div>
     </div>
-
 </div>
 
 </body>
