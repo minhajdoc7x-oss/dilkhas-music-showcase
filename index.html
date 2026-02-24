@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Song Showcase - Dilkhas</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #121212 0%, #1db95422 100%);
+            color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background-color: #1e1e1e;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.6);
+            text-align: center;
+            max-width: 350px;
+            width: 90%;
+            border: 1px solid #333;
+        }
+        .album-art {
+            width: 100%;
+            aspect-ratio: 1/1;
+            border-radius: 12px;
+            margin-bottom: 20px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+            object-fit: cover;
+            background: #282828;
+        }
+        h1 { 
+            margin: 10px 0 5px 0; 
+            font-size: 22px; 
+            letter-spacing: 0.5px;
+        }
+        .artist { 
+            color: #1db954; 
+            margin-bottom: 20px; 
+            font-weight: bold;
+            font-size: 16px;
+            text-transform: uppercase;
+        }
+        audio {
+            width: 100%;
+            margin-top: 10px;
+            height: 40px;
+            filter: invert(100%) hue-rotate(180deg) brightness(1.5);
+        }
+        .lyrics-box {
+            margin-top: 25px;
+            padding: 15px;
+            background: rgba(255,255,255,0.05);
+            border-radius: 10px;
+            /* വരികൾക്ക് ഒരു ബോർഡർ ഗ്ലോ നൽകാൻ */
+            border-bottom: 2px solid #1db954;
+        }
+        .lyrics {
+            font-style: italic;
+            /* വരികൾ കൂടുതൽ ആകർഷകമാക്കാൻ Gradient നൽകുന്നു */
+            background: linear-gradient(to right, #ffffff, #1db954);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-size: 16px; /* അല്പം വലുതാക്കി */
+            line-height: 1.8;
+            font-weight: 600;
+            text-shadow: 0 0 10px rgba(29, 185, 84, 0.3); /* നേർത്ത ഗ്ലോ */
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=500" alt="Music Art" class="album-art">
+    
+    <h1>Plus Two Vibes 2026</h1>
+    <p class="artist">Dilkhas</p>
+
+    <audio controls>
+        <source src="WhatsApp Audio 2026-02-24 at 10.57.28 AM.mpga" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <div class="lyrics-box">
+        <div class="lyrics">
+            "ജീവിതത്തിലെ മനോഹരമായ നിമിഷങ്ങൾ <br> 
+            ഈ പാട്ടിലൂടെ നമുക്ക് ഓർത്തെടുക്കാം..."
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
